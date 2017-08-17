@@ -38,6 +38,8 @@ class icinga2::install {
   # anchor, i.e. for config directory set by confd parameter
   file { $conf_dir:
     ensure  => directory,
+    owner   => $user,
+    group   => $group,
   }
   file { $pki_dir:
     ensure  => directory,
